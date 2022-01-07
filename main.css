@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Luciole";
+  src: url('assets/Luciole-Regular.eot');
+  src: url('assets/Luciole-Regular.eot') format('embedded-opentype'),
+       url('assets/Luciole-Regular.woff2') format('woff2'),
+       url('assets/Luciole-Regular.ttf') format('truetype');
+}
+
+body {
+ font-family: "Luciole", sans-serif;
+}
+
+a {
+  color: #10689b;
+}
+
+.mainHeader {
+ display: grid;
+ grid-template-columns: 1fr 3fr;
+ grid-template-rows: 2fr 1fr;
+}
+
+.mainBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.portrait {
+grid-column-start: 1;
+grid-column-end: 2;
+}
+
+.mainTitle {
+grid-column-start: 2;
+grid-column-end: 5;
+}
+
+.headerNav {
+grid-column-start: 1;
+grid-column-end: 5;
+}
+
+.headerList {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+list-style: none;
+}
+
+.headerListItem {
+  align-self: center;
+  justify-self: center;
+}
+.headerListItem > a {
+  padding: 0.5em;
+}
+
+.headerListItem > a:hover {
+  background-color: lightgray;
+}

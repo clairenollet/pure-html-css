@@ -161,6 +161,15 @@ summary {
   margin-right: 0.3em;
 }
 
+.area,
+.description,
+.institution,
+.period,
+.status {
+  color: #3c3c3c;
+  font-size: 0.9rem;
+}
+
 .area::before {
   content: "📍";
 }

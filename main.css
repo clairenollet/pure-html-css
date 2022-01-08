@@ -132,6 +132,7 @@ ul {
 .portrait {
   grid-column-end: 2;
   grid-column-start: 1;
+  margin: 0 auto 0 auto;
 }
 
 .portraitImg {

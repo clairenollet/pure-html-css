@@ -29,7 +29,19 @@ ul {
   padding: 0;
 }
 
+li {
+  margin-bottom: 0.5em;
+}
+
+summary {
+  padding-bottom: 1em;
+}
+
 /* Class selectors */
+
+.experienceContainer {
+  padding: 0.5em 0 0.5em 0;
+}
 
 .externalLink::after {
   background: url(assets/external.svg) 0 0 no-repeat;
@@ -62,6 +74,7 @@ ul {
 .headerListItem > a {
   color: inherit;
   padding: 0.2em;
+  transition: background-color 0.3s ease;
 }
 
 .footerListItem > a:hover,
@@ -87,7 +100,7 @@ ul {
 }
 
 .mainBody {
-  column-gap: 0.5em;
+  column-gap: 1em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 0.5em;
@@ -136,5 +149,34 @@ ul {
 }
 
 .portraitImg {
-  border-radius: 2em 1em;
+  border-radius: 5em;
+  width: 7em;
+}
+
+.area::before,
+.description::before,
+.institution::before,
+.period::before,
+.status::before {
+  margin-right: 0.3em;
+}
+
+.area::before {
+  content: "📍";
+}
+
+.description::before {
+  content: "📝";
+}
+
+.institution::before {
+  content: "🏢";
+}
+
+.period::before {
+  content: "🗓";
+}
+
+.status::before {
+  content: "🏷";
 }

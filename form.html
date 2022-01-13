@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="main.css">
+ <title>Document</title>
+ <style>
+  .mainFieldset {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   width: 50%
+  }
+
+  .actionButton {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+  }
+ </style>
+</head>
+
+<body>
+ <form method="post" action="form-manager.php" autocomplete="on">
+  <fieldset class="mainFieldset">
+   <legend>Formulaire de souscription</legend>
+   <label for="firstname" autofocus>Firstname</label>
+   <input type="text" name="firstname" id="firstname" maxlength="60" placeholder="Claire" list="data-list"
+    autocomplete="given-name">
+   <datalist id="data-list">
+    <option value="Carole">
+    <option value="Charlotte">
+    <option value="Célia">
+    <option value="Cassandre">
+    <option value="Cécile">
+   </datalist>
+   <label for="select">select</label>
+   <select name="select" id="select" multiple size="5">
+    <optgroup label="odd">
+     <option value="1">1</option>
+     <option value="3" selected>3</option>
+     <option value="5">5</option>
+    </optgroup>
+    <optgroup label="even">
+     <option value="2" disabled>2</option>
+     <option value="4" selected>4</option>
+     <option value="6">6</option>
+    </optgroup>
+   </select>
+   <label for="email">email</label>
+   <input type="email" name="email" id="email">
+   <label for="phone">phone</label>
+   <input type="tel" name="phone" id="phone">
+   <label for="textarea">textarea</label>
+   <textarea id="textarea" name="textarea" rows="3" cols="33">textarea...</textarea>
+   <label for="password">password</label>
+   <input type="password" name="password" id="password" autocomplete="new-password">
+   <label for="number">number</label>
+   <input type="number" name="number" id="number" min="0" max="30" step="2">
+   <label for="odd">odd</label>
+   <input type="range" name="odd" id="odd" min="1" max="31" step="2">
+   <label for="color">color</label>
+   <input type="color" name="color" id="color">
+   <label for="date">date</label>
+   <input type="date" name="date" id="date" autocomplete="bday">
+   <label for="search">search</label>
+   <input type="search" name="search" id="search">
+   <label for="url">url</label>
+   <input type="url" name="url" id="url" required>
+   <fieldset class="inputGroup">
+    <legend>number choice</legend>
+    <label for="1">1</label>
+    <input type="radio" name="radio" id="1" value="1">
+    <label for="2">2</label>
+    <input type="radio" name="radio" id="2" value="2" checked>
+    <label for="3">3</label>
+    <input type="radio" name="radio" id="3" value="3" disabled>
+   </fieldset>
+   <fieldset class="inputGroup">
+    <legend>number choices</legend>
+    <label for="1checkbox">1</label>
+    <input type="checkbox" name="checkbox" id="1checkbox" value="1checkbox" disabled>
+    <label for="2checkbox">2</label>
+    <input type="checkbox" name="checkbox" id="2checkbox" value="2checkbox" checked>
+    <label for="3checkbox">3</label>
+    <input type="checkbox" name="checkbox" id="3checkbox" value="3checkbox">
+   </fieldset>
+   <fieldset class="actionButton">
+    <legend>action choice</legend>
+    <input type="reset" value="Réinitialiser">
+    <input type="submit" value="Envoyer">
+   </fieldset>
+  </fieldset>
+ </form>
+</body>
+
+</html>

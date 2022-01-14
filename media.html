@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media test</title>
+  <style>
+    .media-container {
+      border: dotted linen;
+      display: flex;
+      flex-direction: column;
+      width: 100vh;
+      height: 75vh;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="media-container">
+    <audio controls preload="metadata">
+      <source scr="/assets/my-audio.mp3">
+      <source scr="/assets/my-audio.ogg">
+      <track default kind="captions" srclang="fr" src="/assets/my-audio.vtt" label="My audio transcription" />
+      <p>Votre navigateur ne prend pas en charge l'élément <code>audio</code> en <code>HTML5</code>. <a
+          href="/assets/my-audio.mp3" title="fichier audio">lien vers le fichier audio</a></p>
+    </audio>
+
+    <video controls preload="metadata" poster="/assets/external.svg">
+      <source scr="/assets/my-video.mp4" type="video/mp4">
+      <source src="/assets/my-video.webm" type="video/webm">
+      <p>Votre navigateur ne prend pas en charge l'élément <code>video</code> en <code>HTML5</code>. <a
+          href="/assets/my-video.mp3" title="fichier vidéo">lien vers le fichier vidéo</a></p>
+    </video>
+  </section>
+</body>
+
+</html>
